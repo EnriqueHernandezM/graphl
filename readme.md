@@ -2,8 +2,9 @@ npm i --force
 npm start
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 mutation updateUno {
-updateProducto(id: "7582db493608dcfa3870", datos: { product: "Absolut Vodka", typeOfLiquor: "Vodka", price: 1500, image: "http://cdn.shopify.com/", description: "Producto de prueba", stockItems: 1, codeItem: 2}) {
+updateProducto(id: "641c9bee2e5b92697cf5a77d", datos: {product: "Absolut Vodka", typeOfLiquor: "Vodka", price: 550, image: "http://cdn.shopify.com/", description: "Producto de prueba", stockItems: 1, codeItem: 2,}) {
 id
+price
 }
 }
 
@@ -14,7 +15,7 @@ id
 }
 
 query getUno {
-getProducto(id: "7582db493608dcfa3870") {
+getProducto(id: "641c9bee2e5b92697cf5a77d") {
 id
 product
 price
@@ -36,13 +37,14 @@ stockItems
 }
 
 mutation deleteUno {
-deleteProducto(id: "7582db493608dcfa3870") {
+deleteProducto(id: "641d00e7554448918458ae37e") {
 id
 }
 }
 
 query filtros {
-getProductos(campo: "product", valor: "Nuvo") {
+getProductos(campo: "product", valor: "Absolut Vodka") {
 product
+id
 }
 }

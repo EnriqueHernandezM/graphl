@@ -3,12 +3,14 @@ import Inventario from "./persistencia.js";
 const inventario = new Inventario();
 import crypto from "crypto";
 import moment from "moment";
+
 const fecha = moment().format("lll");
 
-function getProductos({ campo, valor }) {
-  const products = inventario.allInventario();
+async function getProductos({ campo, valor }) {
+  const products = await inventario.allInventario();
   if (campo && valor) {
-    return inventario.filter((el) => el[campo] == valor);
+    let x = products.filter((el) => el[campo] == valor);
+    return x;
   } else {
     return products;
   }
